@@ -21,7 +21,7 @@ In order to contribute to this project:
 1) Fork
 2) Clone
 3) npm install
-4) push changes to "dev" branch
-5) create a new pull request and the adminstrator team will review
+4) push changes to your branch
+5) create a new pull request and the adminstrator team will review.
 
 Thank you kindly, in advance, for your contributions.
