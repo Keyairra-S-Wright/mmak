@@ -67,7 +67,7 @@ class AuthForm extends Component {
 							<Grid container alignItems="center" justify="center" style={{ minHeight: '10vh' }}>
 								<Grid item>
 									<Typography align="center" variant="headline" color="primary">
-										FaceID Not Found.. Please Enter User Name and Password!!
+										Please Enter Username and Password
 									</Typography>
 								</Grid>
 							</Grid>
