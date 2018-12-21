@@ -35,7 +35,7 @@ const Navbar = ({ handleClick, isLoggedIn }) => (
 						<Button color="inherit" component={Link} to="/">
 							HomePage
 						</Button>
-						<Button color="inherit" component={Link} to="/facelogin">
+						<Button color="inherit" component={Link} to="/login">
 							Login
 						</Button>
 						<Button color="inherit" component={Link} to="/signup">

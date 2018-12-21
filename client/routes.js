@@ -21,7 +21,7 @@ class Routes extends Component {
 				{/* Routes placed here are available to all visitors*/}
 				<Route exact path="/" component={Homepage} />
         		<Route exact path="/categories/:categoryName" component={Categories}/>
-				<Route path="/facelogin" component={FaceLogin} />
+				{/* <Route path="/facelogin" component={FaceLogin} /> */}
 				<Route path="/login" component={Login} />
 				<Route path="/signup" component={Signup} />
 				{isLoggedIn && (

@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import StarRatingComponent from 'react-star-rating-component';
@@ -30,7 +29,7 @@ class Review extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
  
-  onStarClick(nextValue, prevValue, name) {
+  onStarClick(nextValue) {
     this.setState({rating: nextValue});
   }
 
@@ -50,7 +49,6 @@ class Review extends React.Component {
     const {classes} = this.props;
     console.log(`here are the props`, this.props)
     const reviews = this.props.reviews;
-    const user = this.props.user.username
     return (                
         <div>
           <h2>Game Rating: {rating}</h2>

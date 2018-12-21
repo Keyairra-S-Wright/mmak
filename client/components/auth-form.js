@@ -117,7 +117,6 @@ class AuthForm extends Component {
 								</Grid>
 							</div>
 						</div>
-						{/* {error && error.response && <div> {error.response.data} </div>} */}
 					</form>
 				</MuiThemeProvider>
 			</div>
