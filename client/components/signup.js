@@ -9,8 +9,6 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import axios from 'axios';
 import { Paper } from 'material-ui';
-import { withStyles } from '@material-ui/core/styles';
-import PropTypes from 'prop-types';
 
 const style = {
 	preview: {
@@ -44,29 +42,6 @@ const style = {
 		width: '30px'
 	}
 };
-
-const styles = (theme) => ({
-	root: {
-		width: '100%'
-	},
-	paper: {
-		padding: theme.spacing.unit * 2,
-		textAlign: 'center',
-		color: theme.palette.text.secondary,
-		height: '70vh'
-	},
-	cameraAndImage: {
-		height: '70vh'
-	},
-	camera: {
-		height: '10',
-		width: '5'
-	},
-	captureButton: {
-		height: '20px',
-		width: '70px'
-	}
-});
 
 class Signup extends Component {
 	constructor(props) {

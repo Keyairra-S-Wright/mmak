@@ -12,7 +12,6 @@ async function seed() {
       name: 'Math Masters',
       description: 'Can you figure out if the logic and divisibility statements are true or false?',
       gif: '/gamePics/math-masters.gif',
-      score: 0,
       gameUrl: 'https://mmak-math-masters.firebaseapp.com/',
       category: 'edu'
     }),
@@ -20,7 +19,6 @@ async function seed() {
 			name: 'Compare In Forest',
 			description: 'Review inequalities in the forest. Earning 50 points will make you a winner!',
 			gif: '/gamePics/compare.gif',
-			score: 0,
 			gameUrl: 'https://compare-in-forest.firebaseapp.com/',
 			category: 'edu'
 		}),
@@ -29,7 +27,6 @@ async function seed() {
 			description:
 				'How long can you run through the island while dodging vines and branches? Play this game to find out!',
 			gif: '/gamePics/island-runner.gif',
-			score: 0,
 			gameUrl: 'https://island-runner-9bd31.firebaseapp.com/',
 			category: 'fun'
 		})

@@ -16,9 +16,6 @@ const User = db.define('user', {
       return () => this.getDataValue('password')
     }
   },
-  imageUrl: {
-    type: Sequelize.STRING,
-  },
   salt: {
     type: Sequelize.STRING,
     get() {

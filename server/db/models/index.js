@@ -1,6 +1,5 @@
 const User = require('./user');
 const Game = require('./game');
-const Question = require('./question');
 const Review = require('./review');
 
 Review.belongsTo(User);
@@ -9,8 +8,7 @@ User.hasMany(Review);
 Game.hasMany(Review);
 User.hasMany(Game);
 Game.belongsTo(User);
-Question.belongsToMany(Game, {through: 'questionForGame'});
-Game.belongsToMany(Question, {through: 'questionForGame'});
+
 
 /**
  * If we had any associations to make, this would be a great place to put them!
@@ -29,6 +27,5 @@ Game.belongsToMany(Question, {through: 'questionForGame'});
 module.exports = {
   User,
   Game,
-  Question,
   Review,
 }
