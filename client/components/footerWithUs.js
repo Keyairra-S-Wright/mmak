@@ -53,7 +53,7 @@ const we = [
   {
     img: '/pictures/Keyairra.png',
     title: 'Keyairra',
-    description: 'Keyairra is a Fullstack Javascript Developer who is interested in EdTech, Gaming, and Social Impact companies',
+    description: 'Keyairra is a Fullstack Javascript Software Developer',
     linkedin: 'https://www.linkedin.com/in/keyairra-s-wright/'
   }
 ]

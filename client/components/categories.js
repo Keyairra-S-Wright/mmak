@@ -17,7 +17,7 @@ class Categories extends Component {
     this.props.fetchCategory(this.state.type)
   }
 
-  componentDidUpdate(prevProps, prevState, snapshot) {
+  componentDidUpdate() {
     const nextType = this.props.match.params.categoryName
     if (nextType !== this.state.type) {
       this.setState(
@@ -30,7 +30,6 @@ class Categories extends Component {
   }
 
   render() {
-    const type = this.props.match.params.categoryName
     const typeCategory = this.props.typeCategory
 
     if (!typeCategory.length) {
@@ -39,38 +38,34 @@ class Categories extends Component {
         <FooterWithUs/>
       </div>
     } else {
-      if (typeCategory.length === 1){
-        return (
-          <div>
-            <Filters/>
-              <div className="imgClassFirst"><img src={typeCategory[0].gif} width="350" height="438"/>
-                <div class="aFun">{typeCategory[0].description}</div>
-              </div>
-            <FooterWithUs/>
-          </div>
-        )
-      } else {
-        return (
-          <div>
-            <Filters/>
-              <div className="imgClassFirst"><img src={typeCategory[0].gif} width="350" height="438"/>
-                <div className="a">{typeCategory[0].description}</div>
-              </div>
-            <div className="imgClass"><img src={typeCategory[1].gif} width="350" height="438"/>
-              <div className="b">{typeCategory[1].description}</div>
+
+        if (typeCategory.length === 1){
+          return (
+            <div>
+              <Filters/>
+                <div className="imgClassFirst"><img src={typeCategory[0].gif} width="350" height="438"/>
+                  <div class="aFun">{typeCategory[0].description}</div>
+                </div>
+              <FooterWithUs/>
             </div>
-            <FooterWithUs/>
-          </div>
-        )
+          )
+        } else {
+          return (
+            <div>
+              <Filters/>
+                <div className="imgClassFirst"><img src={typeCategory[0].gif} width="350" height="438"/>
+                  <div className="a">{typeCategory[0].description}</div>
+                </div>
+              <div className="imgClass"><img src={typeCategory[1].gif} width="350" height="438"/>
+                <div className="b">{typeCategory[1].description}</div>
+              </div>
+              <FooterWithUs/>
+            </div>
+          )
+        }
       }
-    }
   }
 }
-
-{/*<div><img src={typeCategory[0].gif} width="400" height="500"/></div>*/}
-{/*<div className="b">{typeCategory[0].description}</div>*/}
-
-//{typeCategory.map(game => (<div key={game.id}>{game.gif}</div>))}
 
 const mapStateToProps = state => {
   return {

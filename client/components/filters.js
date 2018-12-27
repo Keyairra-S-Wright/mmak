@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Link, withRouter} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Paper from '@material-ui/core/Paper'
