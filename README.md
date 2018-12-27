@@ -1,5 +1,7 @@
 
-An edutainment webapp for elementary-aged youth. Visit https://mmaksgameroom.herokuapp.com/
+An edutainment webapp for elementary-aged youth. 
+Visit and play games at https://mmaksgameroom.herokuapp.com/
+Watch video run through at https://youtu.be/a1B3GYI0GLE
 
 Developers:
 - Asya Slutskaya
@@ -13,6 +15,5 @@ Our team developed three original games:
 - [Island Runner](https://github.com/MMAK-Capstone/island-runner)
 
 ![IslandRunner](https://media.giphy.com/media/7STqSi67HAPw5Rf946/giphy.gif)
-![MmaksgameroomVideo] (https://www.youtube.com/watch?v=a1B3GYI0GLE&feature=youtu.be)
 
 The games use a combination of entertaining and educational styles to engage the children who might use the site.
