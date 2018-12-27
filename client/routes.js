@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Login, Signup, Homepage, Dashboard, GamePage, Categories } from './components';
+import {Homepage, Dashboard, GamePage, Categories } from './components';
+import {Login, Signup} from './components/auth-form'
 import { me, getAllGames } from './store';
 
 /**

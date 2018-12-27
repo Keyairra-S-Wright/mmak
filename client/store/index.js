@@ -6,7 +6,7 @@ import categories from './categories';
 import user from './user';
 import gameReducer from './game';
 
-const reducer = combineReducers({user: user, categories: categories, gameReducer})
+const reducer = combineReducers({user, categories, gameReducer})
 const middleware = composeWithDevTools(
   applyMiddleware(thunkMiddleware, createLogger({collapsed: true}))
 )
@@ -15,3 +15,4 @@ const store = createStore(reducer, middleware)
 export default store
 export * from './user';
 export * from './game';
+export * from './categories'

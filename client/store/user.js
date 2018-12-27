@@ -4,7 +4,7 @@ import history from '../history';
  * ACTION TYPES
  */
 const GET_USER = 'GET_USER';
-const REMOVE_USER = 'REMOVE_USER';
+const REMOVE_USER = 'REMOVE_USER'
 const SET_USER = 'SET_USER';
 const GET_LOGIN = 'GET_LOGIN';
 /**
@@ -16,8 +16,8 @@ const defaultUser = {};
  * ACTION CREATORS
  */
 const getUser = (user) => ({ type: GET_USER, user });
-const removeUser = () => ({ type: REMOVE_USER });
 const setUser = (user) => ({ type: SET_USER, user });
+const removeUser = () => ({type: REMOVE_USER})
 
 /**
  * THUNK CREATORS
@@ -37,22 +37,21 @@ export const setUserThunk = (user) => (dispatch) => {
 	history.push('/dashboard');
 };
 
-export const auth = (user) => async (dispatch) => {
-	let res;
+export const auth = (username, password, method) => async dispatch => {
+	let res
 	try {
-		res = await axios.post(`/auth/login`, user);
+	  res = await axios.post(`/auth/${method}`, {username, password})
 	} catch (authError) {
-		console.error(authError);
-		return dispatch(getUser({ error: authError }));
+	  return dispatch(getUser({error: authError}))
 	}
-
 	try {
-		dispatch(getUser(res.data));
-		history.push('/home');
+	  dispatch(getUser(res.data))
+	  history.push('/home')
 	} catch (dispatchOrHistoryErr) {
-		console.error(dispatchOrHistoryErr);
+	  console.error(dispatchOrHistoryErr)
 	}
-};
+  };
+
 export const signupthunk = (user) => async (dispatch) => {
 	let res;
 	try {
