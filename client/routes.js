@@ -27,8 +27,9 @@ class Routes extends Component {
 				<Route path="/signup" component={Signup} />
 				{isLoggedIn && (
 					<Switch>
-						<Route path="/dashboard" component={Dashboard} />
-						<Route path="/game/:gameId" component={GamePage} />
+						{/* <Route path="/dashboard" component={Dashboard} />
+						<Route path="/game/:gameId" component={GamePage} /> */}
+						<Route component = {Dashboard} />
 					</Switch>
 				)}
 				{/* Displays our Login component as a fallback */}
