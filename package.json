@@ -1,7 +1,7 @@
 {
   "name": "mmak",
   "version": "1.0.0",
-  "description": "Some boilerplate code to get you started - get shakin'!",
+  "description": "educational web-app with original games",
   "engines": {
     "node": ">= 7.0.0"
   },
@@ -50,7 +50,7 @@
     "iframe-resizer": "^3.6.2",
     "material-ui": "^0.20.2",
     "material-ui-background": "^0.1.2",
-    "morgan": "^1.8.1",
+    "morgan": "^1.9.1",
     "multiparty": "^4.2.1",
     "passport": "^0.3.2",
     "passport-google-oauth": "^1.0.0",
