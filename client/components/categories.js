@@ -57,39 +57,71 @@ class Categories extends Component {
           <h2>No Games Yet</h2>
           <FooterWithUs/>
         </div>
-      } else {
+      } else if (typeCategory.length === 1){
           return (
             <div>
-            <Filters/>  
-            <Card className={classes.card}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.media}
-                  image={typeCategory[0].gif}
-                  title="matching gif"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                  Games
-                  </Typography>
-                  <Typography component="p">
-                  {typeCategory[0].description}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button size="small" color="primary" component={Link} to="/login">
-                  Login
-                </Button>
-                <Button size="small" color="primary" component={Link} to="/signup">
-                  SignUp
-                </Button>
-              </CardActions>
+              <Filters/>
+              <Card className={classes.card}>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.media}
+                    image={typeCategory[0].gif}
+                    title="matching gif"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                    {typeCategory[0].name}
+                    </Typography>
+                    <Typography component="p">
+                    {typeCategory[0].description}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" color="primary" component={Link} to="/login">
+                    Login
+                  </Button>
+                  <Button size="small" color="primary" component={Link} to="/signup">
+                    SignUp
+                  </Button>
+                </CardActions>
             </Card>
             <FooterWithUs/>
             </div>
-          );
-      }
+            ) 
+          } else {
+            return (
+              <div>
+              <Filters/>  
+              <Card className={classes.card}>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.media}
+                    image={typeCategory[1].gif}
+                    title="matching gif"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                    {typeCategory[1].name}
+                    </Typography>
+                    <Typography component="p">
+                    {typeCategory[1].description}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" color="primary" component={Link} to="/login">
+                    Login
+                  </Button>
+                  <Button size="small" color="primary" component={Link} to="/signup">
+                    SignUp
+                  </Button>
+                </CardActions>
+              </Card>
+              <FooterWithUs/>
+              </div>
+            );
+      }  
   }
 }
 
@@ -111,4 +143,5 @@ Categories.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
+//export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Categories))
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(Categories)));
